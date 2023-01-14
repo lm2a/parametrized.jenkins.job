@@ -1,5 +1,7 @@
- scm {
-        git('https://github.com/lm2a/jenkins.job.parametrizado.git', 'main') { node -> // is hudson.plugins.git.GitSCM
+job('ejemplo-job-dsl2'){
+  description('job dsl 2 para el curso de jenkins') 
+scm {
+        git('https://github.com/lm2a/parametrized.jenkins.job.git', 'main') { node -> // is hudson.plugins.git.GitSCM
             node / gitConfigName('lurpiano')
             node / gitConfigEmail('takotaniko@gmail.com')
         }
