@@ -19,21 +19,6 @@ job('ejemplo-job-dsl2'){
   }
   
   publishers {
-    mailer('lamenza@gmail.com', true, true)
-    slackNotifier {
-      room('#demo-jenkins-con-slack')
-      notifyAborted(true)
-      notifyFailure(true)
-      notifyNotBuilt(true)
-      notifyUnstable(true)
-      notifyBackToNormal(true)
-      notifySuccess(true)
-      notifyRepeatedFailure(false)
-      customMessage("Este es mi mensaje de cuando todo fue con alegria!")
-      customMessageFailure("Fracaso el build")
-      customMessageNotBuilt("No se creo ningun build")
-      customMessageSuccess("Aleluya!!!")
-      commitInfoChoice('NONE')
-     }
+    mailer('lamenza@gmail.com', true, true)    
   }
 }
